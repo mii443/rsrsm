@@ -1,0 +1,16 @@
+ip: SERVER_IP
+port: RCON_PORT
+password: RCON_PASSWORD
+server_log: true
+
+jobs:
+  - name: "Auto Message (every hour)"
+    cron: "0 0 * * * *"
+    commands:
+      - say This is an automatic message.
+  - name: "restart (UST 4:00)"
+    cron: "0 0 4 * * *"
+    commands:
+      - save
+      - restart
+
